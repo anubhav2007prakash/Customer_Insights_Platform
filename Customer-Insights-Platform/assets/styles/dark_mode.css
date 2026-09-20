@@ -1,0 +1,58 @@
+/* InsightForge AI — Dark mode overrides */
+
+.if-theme-dark .if-search-bar {
+  background: var(--if-neutral-100);
+}
+
+.if-theme-dark .if-card,
+.if-theme-dark .if-metric-card,
+.if-theme-dark .if-customer-card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.if-theme-dark .if-hero {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.12) 0%, var(--if-card) 60%);
+}
+
+.if-theme-dark .if-chat-bubble.ai {
+  background: var(--if-neutral-200);
+}
+
+.if-theme-dark .if-data-table th {
+  background: var(--if-neutral-100);
+}
+
+.if-theme-dark .if-skeleton {
+  background: linear-gradient(90deg, var(--if-neutral-100) 25%, var(--if-neutral-200) 50%, var(--if-neutral-100) 75%);
+  background-size: 200% 100%;
+}
+
+.if-theme-dark .if-topbar {
+  background: rgba(17, 24, 39, 0.92);
+}
+
+.if-theme-dark .if-auth-hero {
+  background: linear-gradient(145deg, #030712 0%, #0F172A 50%, #1E3A5F 100%);
+}
+
+.if-theme-dark .if-nav-item.active {
+  border-color: rgba(59, 130, 246, 0.25);
+}
+
+/* High contrast accessibility */
+@media (prefers-contrast: more) {
+  .if-card, .if-metric-card {
+    border-width: 2px;
+  }
+  .if-nav-item.active {
+    outline: 2px solid var(--if-focus);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
